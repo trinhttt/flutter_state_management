@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getx_demo/screens/first/binding/first_binding.dart';
 import 'package:getx_demo/screens/second/view/second_screen.dart';
 import 'screens/first/view/first_screen.dart';
 import 'package:get/get.dart';
@@ -17,11 +18,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: [
-        GetPage(name: '/first', page: () => FirstScreen()),
-        GetPage(name: '/second', page: () => SecondScreen())
+        GetPage(name: '/first', page: () => FirstScreen(), binding: FirstBinding()),
+        GetPage(name: '/second', page: () => SecondScreen(), binding: FirstBinding())
       ],
-      // initialRoute: '/first',
-      home: FirstScreen(),
+      initialRoute: '/first',
+      // home: FirstScreen(),
       translations: Messages(), // your translations
       locale: Locale('en', 'US'), // translations will be displayed in that locale
       fallbackLocale: Locale('en', 'UK'), // specify the fallback locale in case an invalid locale is selected.

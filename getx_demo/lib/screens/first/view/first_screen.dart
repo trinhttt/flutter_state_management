@@ -7,8 +7,11 @@ import '../../../services/api_service.dart';
 class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final FirstController controller = Get.put(FirstController());
-    final APIService apiService = Get.put(APIService());
+    // final FirstController controller = Get.put(FirstController());
+    // final APIService apiService = Get.put(APIService());
+
+    final controller = Get.find<FirstController>();
+    final apiService = Get.find<APIService>();
 
     return Scaffold(
       appBar: AppBar(title: Text('The second screen')),
