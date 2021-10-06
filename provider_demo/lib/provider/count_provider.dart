@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class FirstProvider extends ChangeNotifier {
+class CountProvider extends ChangeNotifier {
   var count = 0;
 
   increment() {
